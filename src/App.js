@@ -10,6 +10,16 @@ function App() {
         avatar="https://randomuser.me/api/portraits/men/12.jpg"
         name="Craig Anderson"
       />
+      <Contact
+        offline
+        avatar="https://randomuser.me/api/portraits/men/85.jpg"
+        name="Peter Palmer"
+      />
+      <Contact
+        online
+        avatar="https://randomuser.me/api/portraits/women/94.jpg"
+        name="Pamela Dixon"
+      />
     </div>
   );
 }
