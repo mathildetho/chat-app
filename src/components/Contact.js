@@ -1,17 +1,20 @@
-import React from 'react';
-import './Contact.css';
+import React from "react";
+import "./Contact.css";
 
-function Contact(){
-    return (
-        <div className="Contact">
-            <img className="avatar" src="https://randomuser.me/api/portraits/men/12.jpg"/>
-            <div className="status">
-                <h4 className="name">Craig Anderson</h4>
-                <div className="status-online"></div>
-                <p className="status-text">online</p>
-            </div>
+function Contact(props) {
+  const online = props.online;
+  return (
+    <div className="Contact">
+      <img src={props.avatar} alt={props.name} className="avatar" />
+      <div>
+        <p className="name">{props.name}</p>
+        <div className="status">
+          <div className={online ? "status-online" : "status-offline"} />
+          <p className="status-text">{online ? "online" : "offline"}</p>
         </div>
-    )
+      </div>
+    </div>
+  );
 }
 
 export default Contact;
